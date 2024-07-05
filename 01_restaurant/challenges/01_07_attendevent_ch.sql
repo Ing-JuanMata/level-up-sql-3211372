@@ -2,3 +2,16 @@
 
 -- The customer 'atapley2j@kinetecoinc.com' will be in
 -- attendance, and will bring 3 friends.
+
+INSERT INTO Responses(customerId, guests)
+SELECT
+  CustomerID as 'customerId',
+  4 as 'guests'
+FROM
+  Customers
+WHERE Email = 'atapley2j@kinetecoinc.com';
+
+SELECT
+  *
+FROM
+  Responses;
